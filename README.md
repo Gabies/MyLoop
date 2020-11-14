@@ -53,23 +53,23 @@ This app helps users to find a path of specified length that starts and ends at 
    * user should be able to login
 * Register Screen
    * user create or login to their account
-* Explore Screen
+* Stream - Explore Screen
    * shows suggested trails
    * user can search for a trail/path
    * user can favorite a trail or path
 * Detail Screen
    * user can view detailed information about the selected path or trail 
-* Navigation Screen
+* Map - Navigation Screen
    * user can search for a trail
    * user can use a map to navigate to the selected trail or path
-* Camera Screen
+* Creation - Camera Screen
    * user can take a photo of a path/scenery 
 * Profile Screen
    * user can view profile information
    * health profile (includes calories burnt, total length traveled)
-* Favorites Screen
+* Stream - Favorites Screen
    * user can view a list of all his/her favorite trails
-* Scenery Screen
+* Stream - Scenery Screen
    * user can view a gallery of photos taken
 
 ### 3. Navigation
