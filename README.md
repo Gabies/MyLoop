@@ -118,6 +118,8 @@ This app helps users to find a path of specified length that starts and ends at 
 <img src='Digital Wireframe.jpg' width=600>
 
 ### [BONUS] Interactive Prototype
+<img src='My Loop Initial Prototype.gif' title='Video Walkthrough' width='250' />
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Schema 
 [This section will be completed in Unit 9]
