@@ -17,7 +17,7 @@ This app helps users to find a path of specified length that starts and ends at 
 - **Story:** Say you are in a new town or unfamiliar place and you want to find a cycling/ jogging path of a certain length, would not it be nice to find a cyclic path? This app will help the user to find his/her desired path to enjoy.
 - **Market:** Anyone who likes to run/jog, walk or cycle would enjoy this app. If a user enjoys discovering new places and wants to explore new paths via a loop this app will be perfect.
 - **Habit:** Users will check for new paths/trails daily. Users can explore endless new trails and take as many photos as they wish. 
-- **Scope:** Given that we have to interact with the Maps and Strava API's and work with GPS navigation, this app will be quite challenging to implement. However, a stripped down version of this app is nonetheless interesting to build. Furthermore, I'd say that our product is well fleshed out.
+- **Scope:** Given that we have to interact with Strava API's and work with GPS navigation, this app will be quite challenging to implement. However, a stripped down version of this app is nonetheless interesting to build. The app will start out by just allowing the user to log in and out of the app, find a trail then based on desired length, find a path that begins and end in the same position. 
 
 ## Product Spec
 
