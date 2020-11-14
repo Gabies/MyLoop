@@ -30,7 +30,8 @@ This app helps users to find a path of specified length that starts and ends at 
 * User can logout
 * User can search for a trail
 * User can view detailed information about a trail
-* User can get a path that has the same start and destination (Cyclic path)
+* User can get a path on the trail which has the same start and destination (Cyclic path)
+* User can select the desired lenght of the path
 * User can take a photo of the scenery 
 * User can view all photos taken
 
@@ -38,8 +39,10 @@ This app helps users to find a path of specified length that starts and ends at 
 **Optional Nice-to-have Stories**
 
 * Keep track of path completed (competition)
+* Draw a desired path on the map and save it
 * Favorite a path
 * Suggest trails based on favorites
+* Show top rated nearby paths 
 * Count calories
 * Leaderboards
 * Trail Ranks (based on scenery, convenience, number of people completed the path)
@@ -52,15 +55,14 @@ This app helps users to find a path of specified length that starts and ends at 
 * Register Screen
    * user create or login to their account
 * Explore Screen
-   * shows top rated nearby paths 
    * shows suggested trails
    * user can search for a trail/path
    * user can favorite a trail or path
 * Detail Screen
    * user can view detailed information about the selected path or trail 
 * Navigation Screen
+   * user can search for a trail
    * user can use a map to navigate to the selected trail or path
-   * display weather
 * Camera Screen
    * user can take a photo of a path/scenery 
 * Profile Screen
