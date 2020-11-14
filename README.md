@@ -32,9 +32,6 @@ This app helps users to find a path of specified length that starts and ends at 
 * User can view detailed information about a trail
 * User can get a path on the trail which has the same start and destination (Cyclic path)
 * User can select the desired lenght of the path
-* User can take a photo of the scenery 
-* User can view all photos taken
-
 
 **Optional Nice-to-have Stories**
 
@@ -43,6 +40,8 @@ This app helps users to find a path of specified length that starts and ends at 
 * Favorite a path
 * Suggest trails based on favorites
 * Show top rated nearby paths 
+* User can take a photo of the scenery 
+* User can view all photos taken
 * Count calories
 * Leaderboards
 * Trail Ranks (based on scenery, convenience, number of people completed the path)
@@ -66,9 +65,12 @@ This app helps users to find a path of specified length that starts and ends at 
 * Camera Screen
    * user can take a photo of a path/scenery 
 * Profile Screen
-   * user can view past and favorited trails 
-   * user can view photos taken
+   * user can view profile information
    * health profile (includes calories burnt, total length traveled)
+* Favorites Screen
+   * user can view a list of all his/her favorite trails
+* Scenery Screen
+   * user can view a gallery of photos taken
 
 ### 3. Navigation
 
@@ -78,6 +80,8 @@ This app helps users to find a path of specified length that starts and ends at 
 * Navigate
 * Camera
 * Profile
+* Favorites
+* Scenery
 
 **Flow Navigation** (Screen to Screen)
 
@@ -88,11 +92,24 @@ This app helps users to find a path of specified length that starts and ends at 
 * Explore Screen
    * Detail Screen
    * Profile Screen
+   * Navigation Screen
+   * Favorites Screen
+   * Scenery Screen
+* Detail Screen
+   * Navigation Screen
+   * Explore Screen
+* Navigation Screen
    * Camera Screen
+   * Favorites Screen
+   * Scenery Screen
 * Camera Screen
-   * Profile Screen 
+   * Scenery Screen 
+   * Navigation Screen
 * Profile Screen
    * Explore Screen 
+   * Navigation Screen
+   * Favorites Screen
+   * Scenery Screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
