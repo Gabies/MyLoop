@@ -112,7 +112,6 @@ This app helps users to find a path of specified length that starts and ends at 
    * Scenery Screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src='Wireframe.jpg' width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
