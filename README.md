@@ -115,6 +115,7 @@ This app helps users to find a path of specified length that starts and ends at 
 <img src='Wireframe.jpg' width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src='Digital Wireframe.jpg' width=600>
 
 ### [BONUS] Interactive Prototype
 
