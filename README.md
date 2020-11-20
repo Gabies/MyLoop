@@ -122,9 +122,15 @@ This app helps users to find a path of specified length that starts and ends at 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+  #### Trails
+      
+      | Property  | Type  | Description |
+      | --------- | ----- | ----------- |
+      |           |       |             |
+      |           |       |             |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
