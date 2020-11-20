@@ -123,15 +123,26 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Schema 
 ### Models
-  #### Trail
+  #### User
   
   | Property  | Type  | Description |
   | --------- | ----- | ----------- |
   | userID    | String | unique id for a user |
   | username  | Pointer to user | name of the user |
+  | image     | File  | user's profile image |
+  | scenery   | File  | images of scenes captured by the user |
+  | favoriteRoutes | Array of Image Objects | list of the user's favorite routes |
   
+  #### Trail
   
-  #### User
+  | Property  | Type  | Description |
+  | --------- | ----- | ----------- |
+  | trailID   | String | unique id for a trail |
+  | name      | String | name of the trail |
+  | image     | File  | picture of a trail |
+  | description | String | detailed overview of the trail |
+  | location  | Array of Floats     | longtitude and latitude of a trail |
+  | scenery   | Array of Images     | images related to a specific trail |
 
 
 ### Networking
