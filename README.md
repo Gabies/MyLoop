@@ -31,7 +31,7 @@ This app helps users to find a path of specified length that starts and ends at 
 * User can search for a trail
 * User can view detailed information about a trail
 * User can get a path on the trail which has the same start and destination (Cyclic path)
-* User can select the desired lenght of the path
+* User can select the desired length of the path
 
 **Optional Nice-to-have Stories**
 
