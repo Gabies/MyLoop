@@ -26,8 +26,8 @@ This app helps users to find a path of specified length that starts and ends at 
 **Required Must-have Stories**
 
 * User can sign up for a new account
-* User can login
-* User can logout
+* User can log in
+* User can log out
 * User can search for a trail
 * User can view detailed information about a trail
 * User can get a path on the trail which has the same start and destination (Cyclic path)
