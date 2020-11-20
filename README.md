@@ -126,7 +126,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
   #### Trails
       
       | Property  | Type  | Description |
-      | :---------: | :-----: | :-----------: |
+      | :--------- | :-----: | -----------: |
       | userID    | String | unique id for a user |
       | username  | Pointer to user | name of the user |
 
