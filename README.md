@@ -25,13 +25,13 @@ This app helps users to find a path of specified length that starts and ends at 
 
 **Required Must-have Stories**
 
-* User can sign up for a new account
-* User can login
-* User can logout
-* User can search for a trail
-* User can view detailed information about a trail
-* User can get a path on the trail which has the same start and destination (Cyclic path)
-* User can select the desired length of the path
+- [ ] User can sign up for a new account
+- [X] User can login
+- [ ] User can logout
+- [ ] User can search for a trail
+- [ ] User can view detailed information about a trail
+- [ ] User can get a path on the trail which has the same start and destination (Cyclic path)
+- [ ] User can select the desired length of the path
 
 **Optional Nice-to-have Stories**
 
@@ -180,3 +180,9 @@ ParseUser.logInInBackground(username, password, new LogInCallback() {
 - [Create basic snippets for each Parse network request]
 
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+### App Walkthough GIF
+  ##### Login Screen
+<img src="login_walkthrough.gif" title="Vertical View" width=250><br> 
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
