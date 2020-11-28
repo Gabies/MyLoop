@@ -11,7 +11,6 @@ public class Athlete extends ParseObject {
     public static final String KEY_IMAGE = "Scenery";
     public static final String KEY_USER = "Athlete";
 
-
     public ParseFile getImage() {
         return getParseFile(KEY_IMAGE);
     }
