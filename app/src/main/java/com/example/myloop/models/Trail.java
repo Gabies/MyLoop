@@ -20,7 +20,7 @@ public class Trail extends ParseObject {
 
     public void setTrail(ParseUser user) { put(TRAIL_NAME, user); }
 
-    public ParsePolygon getTrailRoute() { return getParsePolygon(ROUTE); }
+    public ParsePolygon getTrailRoute() { return getParsePolygon(ROUTE); }  //array of GeoPoints
 
     public double getTrailDistance() { return getDouble(TRAIL_DISTANNCE); }
 
