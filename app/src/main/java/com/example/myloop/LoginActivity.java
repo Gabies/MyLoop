@@ -114,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (e != null) {
                     Log.e(TAG, "Issue with login", e);
+                    goRegister();
                     return;
                 }
 
@@ -124,9 +125,16 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private void goRegister() {
+       Intent i = new Intent(this, RegisterActivity.class);
+       startActivity(i);
+       //finish();
+    }
+
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
+        finish();
     }
 }
 
