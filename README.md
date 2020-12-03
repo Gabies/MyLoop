@@ -25,7 +25,7 @@ This app helps users to find a path of specified length that starts and ends at 
 
 **Required Must-have Stories**
 
-- [ ] User can sign up for a new account
+- [X] User can sign up for a new account
 - [X] User can login
   - [X] User can log in with username and password
   - [X] User can log in with Google account

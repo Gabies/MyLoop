@@ -2,7 +2,6 @@ package com.example.myloop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.parse.Parse;
+
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -23,6 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
 
         final EditText name = findViewById(R.id.name);
         final EditText username = findViewById(R.id.username);
@@ -41,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void registerUser(String username, String password) {
         ParseUser user = new ParseUser();
+
 
         user.setUsername(username);
         user.setPassword(password);
