@@ -187,4 +187,13 @@ ParseUser.logInInBackground(username, password, new LogInCallback() {
   ##### Login Screen
 <img src="login_walkthrough.gif" title="Vertical View" width=250><br> 
 
+ ##### Logout
+<img src="logout_walkthrough.gif" title="Vertical View" width=250><br> 
+
+ ##### Register Screen
+<img src="register_walkthrough.gif" title="Vertical View" width=250><br> 
+
+ ##### Login with Google Account
+<img src="google_signin_walkthrough.gif" title="Vertical View" width=250><br> 
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
