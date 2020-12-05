@@ -83,8 +83,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        // Check for existing Google Sign In account, if the user is already signed in
-// the GoogleSignInAccount will be non-null.
+        /* Check for existing Google Sign In account, if the user is already signed in the
+        GoogleSignInAccount will be non-null. */
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
        // updateUI(account);
     }
