@@ -1,38 +1,41 @@
 package com.example.myloop;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
 
-import com.parse.ParseUser;
+import com.example.myloop.fragments.ExploreFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG = "MainActivity";
+    final FragmentManager fragmentManager = getSupportFragmentManager();
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button logoutButton = findViewById(R.id.logoutButton);
-        logoutButton.setOnClickListener(new View.OnClickListener() {
+        
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Log.i(TAG, "Logout button clicked");
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser();
-
-                goLogin();
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
+                Fragment fragment;
+                switch (menuitem.getItemId()) {
+                    case R.id.action_home:
+                        fragment = new ExploreFragment();
+                        break;
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + menuitem.getItemId());
+                }
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
+                return true;
             }
         });
-    }
-
-    private void goLogin() {
-        Intent i = new Intent(this, LoginActivity.class);
-        startActivity(i);
     }
 }

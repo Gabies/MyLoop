@@ -10,4 +10,7 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
+    <style name="AppTheme.BackgroundImageStyle">
+        <item name="android:windowBackground">@drawable/loginbackground</item>
+    </style>
 </resources>

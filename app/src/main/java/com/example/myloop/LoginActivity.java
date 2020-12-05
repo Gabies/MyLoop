@@ -118,17 +118,17 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-            //Navigate to main activity if the user has signed in properly
-            goMainActivity();
-            Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
+                //Navigate to main activity if the user has signed in properly
+                goMainActivity();
+                Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void goRegister() {
-       Intent i = new Intent(this, RegisterActivity.class);
-       startActivity(i);
-       //finish();
+        Intent i = new Intent(this, RegisterActivity.class);
+        startActivity(i);
+        //finish();
     }
 
     private void goMainActivity() {
@@ -137,4 +137,3 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 }
-
