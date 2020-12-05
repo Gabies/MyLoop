@@ -4,6 +4,7 @@
 
     <permission android:name="android.permission.INTERNET" />
     <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".MyLoopApplication"
@@ -24,6 +25,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-    </application>
+
+
+        <service
+            android:name="MyLoopService"
+            android:foregroundServiceType="location" >
+        <!-- Any inner elements would go here. -->
+    </service>
+
+</application>
 
 </manifest>
