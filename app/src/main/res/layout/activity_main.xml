@@ -8,12 +8,19 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/flContainer"
+<!--    <FrameLayout-->
+<!--        android:id="@+id/flContainer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/bottom_navigation">-->
+<!--    </FrameLayout>-->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation">
-    </FrameLayout>
+        android:layout_above="@id/bottom_navigation"
+        tools:context=".DriverMapActivity" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
