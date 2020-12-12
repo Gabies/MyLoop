@@ -11,6 +11,7 @@ import com.parse.ParseUser;
 public class Trail extends ParseObject {
     public static final String ROUTE = "Route";
     public static final String TRAIL_NAME = "TrailName";
+    public static final String TRAIL_DESCRIPTION = "Name";
     public static final String TRAIL_DISTANNCE = "Length";
     public static final String TRAIL_SCENERY = "Scenery";
 
@@ -19,6 +20,10 @@ public class Trail extends ParseObject {
     }
 
     public void setTrail(ParseUser user) { put(TRAIL_NAME, user); }
+
+    public String getTrailDescription() {
+        return getString(TRAIL_DESCRIPTION);
+    }
 
     public ParsePolygon getTrailRoute() { return getParsePolygon(ROUTE); }  //Array of GeoPoints
 
