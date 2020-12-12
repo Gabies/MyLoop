@@ -4,21 +4,25 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myloop.models.Trail;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+import com.example.myloop.models.Route;
 import com.google.android.gms.maps.MapView;
 
 import java.util.List;
 
 public class SegmentAdapter extends RecyclerView.Adapter<SegmentAdapter.ViewHolder>{
-    private Context context;
-    List<Trail> segments;
+    private final Context context;
+    List<Route> segments;
 
-    public SegmentAdapter(Context context, List<Trail> segments){
+    public SegmentAdapter(Context context, List<Route> segments){
         this.context = context;
         this.segments = segments;
     }
@@ -32,33 +36,36 @@ public class SegmentAdapter extends RecyclerView.Adapter<SegmentAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull SegmentAdapter.ViewHolder holder, int position) {
-        Trail segment = segments.get(position);
-        holder.bind(segment);
+        Route segment = segments.get(position);
+
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(R.drawable.route_1)
+                .error(R.drawable.route_1)
+                .diskCacheStrategy(DiskCacheStrategy.ALL);
+
+        holder.name.setText(segment.getName());
+        Glide.with(context).setDefaultRequestOptions(requestOptions).load(segment.getImage()).into(holder.map);
+        holder.distance.setText(String.valueOf(segment.getDistance()) + "mi");
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return segments.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final MapView map;
         private final TextView name;
         private final TextView distance;
+        private final ImageView map;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            map = itemView.findViewById(R.id.mapView);
             name = itemView.findViewById(R.id.tvTrail);
             distance = itemView.findViewById(R.id.ivDistance);
-        }
-
-        public void bind(Trail segment) {
-            name.setText(segment.getTrailDescription());
-            distance.setText(String.valueOf(segment.getTrailDistance()));
+            map = itemView.findViewById(R.id.mapView);
         }
     }
 }

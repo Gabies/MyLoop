@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.google.android.gms.maps.MapView
+    <ImageView
         android:id="@+id/mapView"
         android:layout_width="64dp"
         android:layout_height="63dp"
@@ -14,7 +14,9 @@
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/activity_horizontal_margin"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:src="@drawable/route_1"/>
 
     <TextView
         android:id="@+id/tvTrail"
@@ -39,6 +41,7 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_toEndOf="@+id/mapView"
         tools:text="6.3km"
+        android:textColor="@color/black"
         app:drawableStartCompat="@drawable/ic_location" />
 
     <Button
@@ -48,5 +51,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/activity_vertical_margin"
         android:layout_alignBaseline="@id/mapView"
-        tools:text="Details" />
+        tools:text="Go to route"
+        android:textColor="@color/white"
+        android:background="@drawable/ic_button_background_secondary"/>
 </RelativeLayout>

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myloop.LoginActivity;
 import com.example.myloop.R;
 import com.example.myloop.SegmentAdapter;
+import com.example.myloop.models.Route;
 import com.example.myloop.models.Trail;
 import com.parse.ParseUser;
 
@@ -27,7 +28,7 @@ public class ExploreFragment extends Fragment {
     public static final String TAG = "ExploreFragment";
     protected RecyclerView rvSegments;
     protected SegmentAdapter adapter;
-    protected List<Trail> allSegments;
+    protected List<Route> allSegments;
 
     public ExploreFragment() {
         // Required empty public constructor

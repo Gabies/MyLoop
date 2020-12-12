@@ -22,6 +22,22 @@
         android:layout_above="@id/bottom_navigation"
         tools:context=".DriverMapActivity" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore more routes"
+            android:background="@drawable/ic_button_background_secondary"
+            android:layout_margin="12dp"
+            android:textColor="@color/white"
+            android:id="@+id/btn_explore"/>
+    </LinearLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -30,5 +46,6 @@
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        android:visibility="gone"
         app:menu="@menu/menu_bottom_navigation" />
 </RelativeLayout>
