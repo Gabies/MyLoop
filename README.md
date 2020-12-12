@@ -200,4 +200,4 @@ ParseUser.logInInBackground(username, password, new LogInCallback() {
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 
-<img src="MyLoop.mp4" title="Full Walkthrough" width=250><br>
+<img src="MyLoop.gif" title="Full Walkthrough" width=250><br>
