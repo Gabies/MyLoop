@@ -1,61 +1,74 @@
 package com.example.myloop;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
-import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.myloop.fragments.ExploreFragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
+import com.example.myloop.fragments.SegmentSheet;
+import com.example.myloop.helpers.MapService;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.Polyline;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.parse.ParseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG ="MainActivity";
+
     final FragmentManager fragmentManager = getSupportFragmentManager();
     private BottomNavigationView bottomNavigationView;
+    private GoogleMap gMap;
+    Location mLastLocation;
+
+    LocationRequest mLocationRequest;
+    private FusedLocationProviderClient mFusedLocationClient;
+    private SupportMapFragment mapFragment;
+    private LocationCallback mLocationCallback;
+    private List<Polyline> polylines;
+    private final int REQUEST_CODE = 20;
+    Marker mCurrLocationMarker;
+    private int MAP_LOADED = 0;
+    int myId = 0;
+
+    private FirebaseDatabase myFirebaseDatabase;
+    private DatabaseReference myFDref;
+
+    private MapService mapService;
+    private SupportMapFragment supportMapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button logout = findViewById(R.id.logoutButton);
-        logout.setOnClickListener(new View.OnClickListener() {
+        Button btnExplore = findViewById(R.id.btn_explore);
+
+        btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Log.i(TAG, "onClick logout button");
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser(); //this will now be null
-                goLogin();
+            public void onClick(View view) {
+                SegmentSheet segmentSheet = new SegmentSheet();
+                segmentSheet.showNow(getSupportFragmentManager(), "segment");
             }
         });
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
-                Fragment fragment;
-                switch (menuitem.getItemId()) {
-                    case R.id.action_home:
-                        fragment = new ExploreFragment();
-                        break;
-                    default:
-                        throw new IllegalStateException("Unexpected value: " + menuitem.getItemId());
-                }
-                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
-                return true;
-            }
-        });
+        supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapService = new MapService(getApplicationContext(), this, supportMapFragment);
+        mapService.init();
+        mapService.drawMap(true);
     }
 
-    private void goLogin() {
-        startActivity(new Intent(this, LoginActivity.class));
-    }
+    //TO-DO
+    //create info window for nearby cycles
+    //https:developers.google.com/maps/documentation/android-sdk/marker
 }

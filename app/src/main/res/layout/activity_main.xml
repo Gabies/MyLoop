@@ -8,19 +8,35 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/flContainer"
+<!--    <FrameLayout-->
+<!--        android:id="@+id/flContainer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/bottom_navigation">-->
+<!--    </FrameLayout>-->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation">
+        android:layout_above="@id/bottom_navigation"
+        tools:context=".DriverMapActivity" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
         <Button
-            android:id="@+id/logoutButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="LogOut" />
-    </FrameLayout>
+            android:text="Explore more routes"
+            android:background="@drawable/ic_button_background_secondary"
+            android:layout_margin="12dp"
+            android:textColor="@color/white"
+            android:id="@+id/btn_explore"/>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -30,6 +46,6 @@
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        android:visibility="gone"
         app:menu="@menu/menu_bottom_navigation" />
-
 </RelativeLayout>
