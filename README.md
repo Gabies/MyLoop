@@ -186,18 +186,18 @@ ParseUser.logInInBackground(username, password, new LogInCallback() {
 
 ### App Walkthough GIF
   ##### Login Screen
-<img src="login_walkthrough.gif" title="Vertical View" width=250><br> 
+<img src="login_walkthrough.gif" title="Login View" width=250><br> 
 
  ##### Logout
-<img src="logout_walkthrough.gif" title="Vertical View" width=250><br> 
+<img src="logout_walkthrough.gif" title="Logout View" width=250><br> 
 
  ##### Register Screen
-<img src="register_walkthrough.gif" title="Vertical View" width=250><br> 
+<img src="register_walkthrough.gif" title="Register View" width=250><br> 
 
  ##### Login with Google Account
-<img src="google_signin_walkthrough.gif" title="Vertical View" width=250><br> 
+<img src="google_signin_walkthrough.gif" title="Google Login View" width=250><br> 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 
-<img src="https://imgur.com/a/a2qDm6e" title="Full Walkthrough" width=250><br>
+<img src="MyLoop.mp4" title="Full Walkthrough" width=250><br>
